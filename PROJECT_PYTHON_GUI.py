@@ -45,10 +45,10 @@ def msg():
         
         msg=name+' your unique id is  '+str(rr)+"  you are travelling for a total of   "+str(tot)+'  days'+"  from  "+source+"   to "+destination+ "  you are travelling for a distance of   "+str(bbf)+'  kms  '+m[0]+' is successfully booked under you name'
         from twilio.rest import Client 
-        #SID='AC6a99b05cf6256f3c2a793d519b0241e9'
+        SID='AC6a99b05cf6256f3c2a793d519b0241e9'
         Auth_Token='15cdd6c9cd1a1876f89ee912df2a9751'
-        #cl=Client(SID,Auth_Token)
-        #cl.messages.create(body=msg,from_='+14352535685',to=str(phno))
+        cl=Client(SID,Auth_Token)
+        cl.messages.create(body=msg,from_='+14352535685',to=str(phno))
         print("message sent successfully :)")
         print(name,' please check your messages for the invoice')
    def showcars():
@@ -276,10 +276,10 @@ def retur():
             cur.execute(st2); m2=cur.fetchone()
             msg=m[0]+' you have travelled from  '+m[3]+"  to   "+m[4]+ " a total distance of   "+str(m[5])+'  kms  '+"taken together for  "+str(m[6])+"  days your final bill is "+"₹"+str(totcost1)[:8]
             from twilio.rest import Client 
-            #SID='AC6a99b05cf6256f3c2a793d519b0241e9'
+            SID='AC6a99b05cf6256f3c2a793d519b0241e9'
             Auth_Token='15cdd6c9cd1a1876f89ee912df2a9751'
-            #cl=Client(SID,Auth_Token)
-            #cl.messages.create(body=msg,from_='+14352535685',to=str(m2[0]))
+            cl=Client(SID,Auth_Token)
+            cl.messages.create(body=msg,from_='+14352535685',to=str(m2[0]))
             print("message sent successfully :)")
             print(m[0],' please check your messages for the invoice')
             
@@ -342,10 +342,10 @@ def retur():
             cur.execute(st2); m2=cur.fetchone()
             msg=m[0]+' you have travelled from  '+m[3]+"  to   "+m[4]+ " a total distance of  "+str(m[5])+'  kms  '+"taken together "+str(m[6])+" days your final bill is "+"₹"+str(totcost)[:8]
             from twilio.rest import Client 
-            #SID='AC6a99b05cf6256f3c2a793d519b0241e9'
+            SID='AC6a99b05cf6256f3c2a793d519b0241e9'
             Auth_Token='15cdd6c9cd1a1876f89ee912df2a9751'
-            #cl=Client(SID,Auth_Token)
-            #cl.messages.create(body=msg,from_='+14352535685',to=str(m2[0]))
+            cl=Client(SID,Auth_Token)
+            cl.messages.create(body=msg,from_='+14352535685',to=str(m2[0]))
             print("message sent successfully :)")
             print(m[0],' please check your messages for the invoice')
             
